@@ -1,10 +1,15 @@
 {
   "files": [],
   "virtualUserMultiplier": 1,
-  "customColumns": ["enterprise", "department", "feature", "scenario"],
+  "customColumns": [
+    "enterprise",
+    "department",
+    "feature",
+    "scenario"
+  ],
   "virtualUserSuites": [
     {
-      "skip": false,
+      "skip": true,
       "identifier": "first-test",
       "files": [],
       "variables": {
@@ -13,12 +18,33 @@
       }
     },
     {
-      "skip": false,
+      "skip": true,
       "identifier": "second-test",
       "files": [],
       "variables": {
         "url": "https://www.coloringdreams.com/",
         "searchText": "${SECRET_SEARCH}"
+      }
+    },
+    {
+      "skip": false,
+      "identifier": "third-test",
+      "files": [
+        "register.test.js"
+      ],
+      "variables": {
+        "email_to_create_account": "diego897ddd23@gmail.com",
+        "firstname": "diego",
+        "lastname": "ramos",
+        "password": "12345",
+        "address": "address av san gr",
+        "city": "HUaral",
+        "state": "Hawaii",
+        "postal_code": "12345",
+        "country": "United States",
+        "mobile_phone": "985689878",
+        "alias": "my aliase",
+        "company": "csti"
       }
     }
   ]
