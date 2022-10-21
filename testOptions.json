@@ -27,7 +27,7 @@
       }
     },
     {
-      "skip": false,
+      "skip": true,
       "identifier": "third-test",
       "files": [
         "register.test.js"
@@ -45,6 +45,19 @@
         "mobile_phone": "985689878",
         "alias": "my aliase",
         "company": "csti"
+      }
+    },
+    {
+      "skip": false,
+      "identifier": "last-test",
+      "files": [
+        "register-docker.test.js"
+      ],
+      "variables": {
+        "firstname": "diego",
+        "lastname": "ramos",
+        "email": "544@gmail.com",
+        "url_base": "${URL_BASE}"
       }
     }
   ]
