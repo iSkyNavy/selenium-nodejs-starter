@@ -1,5 +1,4 @@
 const { By, until } = require("selenium-webdriver");
-const getBrowserDriver = require("../../browsers/browserDriver")
 
 const registerHelpers = {
     createAccount: async (driver, user) => {
@@ -18,7 +17,7 @@ const registerHelpers = {
                         await createAccountLink.click()
                     })
                     .catch(() => console.log("There isn't link to create account"));
-                //find elements to send params
+                
                 await driver.findElement(By.name("firstName")).sendKeys(user.firstname);
                 await driver.findElement(By.name("lastName")).sendKeys(user.lastname);
                 await driver.findElement(By.name("emailAddress")).sendKeys(user.email);
@@ -29,7 +28,6 @@ const registerHelpers = {
                 if (buttonIsEnabled) {
                     await submitButton.click()
                     await driver.sleep(5000)
-                    // const confirmText = await driver.findElement(By.xpath("//div[contains(text(), 'Great! Now check your email (16@gmail.com) to complete registration.')]"))
                     const confirmText = await driver.findElement(By.className("registration-sent"));
                     
                     if (confirmText) {
@@ -43,6 +41,7 @@ const registerHelpers = {
                 }
         } catch (error) {
             console.error(error)
+            return "Error";
         }
     }
 }
